@@ -7,11 +7,19 @@
     </div>
     <div class="main">
       <div class="container">
-        <h1>CONTAR</h1>
-        <%= link_to '+', action: plus_one(id: count.id),  class:"btn btn-default" %>
-        <div id="output">0</div>
-      </div>
-    </div>
+        <div class="create">
+  <div class="container">
+    <%= form_for(@count) do |f| %>  
+      <div class="field"> 
+        <p>What are you counting </p><br> 
+        <%= f.text_area :name %> 
+      </div> 
+      <div class="actions"> 
+        <%= f.submit "Create" %> 
+      </div> 
+    <% end %>
+  </div>
+</div>
     <div class="footer">
       <div class="container">
         <div > <%= link_to "more", "#", id: "more_toggle", remote: true%></div> 

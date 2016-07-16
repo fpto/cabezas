@@ -55,5 +55,5 @@ Rails.application.routes.draw do
   #   end
   resources :counts
   root 'counts#new'
-
+  get 'counts/name' => 'counts#name'
 end
